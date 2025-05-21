@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="JUnit Platform Suite" tests="0" skipped="0" failures="0" errors="0" time="0" hostname="172.24.27.60-spb.dhcp.yndx.net" timestamp="2025-05-22T01:18:48">
+<properties>
+<property name="apple.awt.application.name" value="ConsoleLauncher"/>
+<property name="file.encoding" value="UTF-8"/>
+<property name="file.separator" value="/"/>
+<property name="java.class.path" value="/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/target/classes:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/src/test/build:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/FastInfoset-1.2.15.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/antlr-2.7.7.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/antlr4-runtime-4.13.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/apiguardian-api-1.1.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/byte-buddy-1.12.8.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/checker-qual-3.42.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/classmate-1.5.1.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/hibernate-commons-annotations-5.1.2.Final.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/hibernate-core-5.6.7.Final.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/hibernate-core-6.6.1.Final.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/istack-commons-runtime-3.0.7.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.activation-api-2.1.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.annotation-api-3.0.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.faces-4.1.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.inject-api-2.0.1.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.jakartaee-web-api-9.1.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.persistence-api-3.0.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.servlet-api-6.0.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.transaction-api-2.0.1.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jakarta.xml.bind-api-4.0.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jandex-2.4.2.Final.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jandex-3.2.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/javax.activation-api-1.2.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/javax.persistence-api-2.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jaxb-api-2.3.1.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jaxb-runtime-2.3.1.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jboss-logging-3.4.3.Final.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/junit-jupiter-api-5.9.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/junit-jupiter-engine-5.9.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/junit-platform-commons-1.9.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/junit-platform-console-standalone-1.9.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/junit-platform-engine-1.9.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/log4j-api-2.12.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/lombok-1.18.30.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/opentest4j-1.2.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/org.eclipse.persistence.asm-9.1.0.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/org.eclipse.persistence.core-3.0.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/org.eclipse.persistence.jpa-3.0.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/org.eclipse.persistence.jpa.jpql-3.0.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/postgresql-42.7.2.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/primefaces-12.0.0-jakarta.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/stax-ex-1.8.jar:/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3/dependency/txw2-2.3.1.jar"/>
+<property name="java.class.version" value="67.0"/>
+<property name="java.home" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home"/>
+<property name="java.io.tmpdir" value="/var/folders/8s/_r3x3s9s7z366xr14zg9yx3r0000gn/T/"/>
+<property name="java.library.path" value="/Users/zazhigalka/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+<property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+<property name="java.runtime.version" value="23.0.2"/>
+<property name="java.specification.name" value="Java Platform API Specification"/>
+<property name="java.specification.vendor" value="Oracle Corporation"/>
+<property name="java.specification.version" value="23"/>
+<property name="java.vendor" value="Homebrew"/>
+<property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+<property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+<property name="java.vendor.version" value="Homebrew"/>
+<property name="java.version" value="23.0.2"/>
+<property name="java.version.date" value="2025-01-21"/>
+<property name="java.vm.compressedOopsMode" value="Zero based"/>
+<property name="java.vm.info" value="mixed mode, sharing"/>
+<property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+<property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+<property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+<property name="java.vm.specification.version" value="23"/>
+<property name="java.vm.vendor" value="Homebrew"/>
+<property name="java.vm.version" value="23.0.2"/>
+<property name="jdk.debug" value="release"/>
+<property name="line.separator" value="
+"/>
+<property name="native.encoding" value="UTF-8"/>
+<property name="os.arch" value="aarch64"/>
+<property name="os.name" value="Mac OS X"/>
+<property name="os.version" value="14.4"/>
+<property name="path.separator" value=":"/>
+<property name="stderr.encoding" value="UTF-8"/>
+<property name="stdout.encoding" value="UTF-8"/>
+<property name="sun.arch.data.model" value="64"/>
+<property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
+<property name="sun.cpu.endian" value="little"/>
+<property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+<property name="sun.java.command" value="org.junit.platform.console.ConsoleLauncher --scan-classpath src/test/build --reports-dir target/surefire-reports --details tree"/>
+<property name="sun.java.launcher" value="SUN_STANDARD"/>
+<property name="sun.jnu.encoding" value="UTF-8"/>
+<property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+<property name="user.country" value="RU"/>
+<property name="user.dir" value="/Users/zazhigalka/Desktop/itmo/4sem/opi/lab3"/>
+<property name="user.home" value="/Users/zazhigalka"/>
+<property name="user.language" value="ru"/>
+<property name="user.name" value="zazhigalka"/>
+<property name="user.timezone" value="Europe/Moscow"/>
+</properties>
+<system-out><![CDATA[
+unique-id: [engine:junit-platform-suite]
+display-name: JUnit Platform Suite
+]]></system-out>
+</testsuite>
