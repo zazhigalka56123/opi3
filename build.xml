@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="weblab3" default="build" basedir=".">
+
+    <property file="build.properties"/>
+
+    <!-- Очистка -->
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+        <delete dir="${test.build.dir}"/>
+        <delete dir="${dist.dir}"/>
+        <delete dir="${report.dir}"/>
+    </target>
+
+    <!-- Инициализация директорий -->
+    <target name="init">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${test.build.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+        <mkdir dir="${report.dir}"/>
+    </target>
+
+    <!-- Компиляция -->
+    <target name="compile" depends="init">
+        <javac srcdir="${src.main}" destdir="${build.dir}" encoding="${encoding}" includeantruntime="false">
+            <classpath>
+                <fileset dir="dependency">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+        <!-- Копируем ресурсы, исключая MANIFEST.MF -->
+        <copy todir="${build.dir}">
+            <fileset dir="${src.resources}" excludes="MANIFEST.MF" erroronmissingdir="true"/>
+        </copy>
+    </target>
+
+    <!-- Компиляция тестовых классов -->
+    <target name="compile-test" depends="compile">
+        <javac srcdir="${src.test}" destdir="${test.build.dir}" encoding="${encoding}" includeantruntime="false">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <fileset dir="dependency">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <!-- Упаковка в jar с MANIFEST.MF -->
+    <target name="build" depends="compile">
+        <jar destfile="${dist.dir}/${jar.name}" basedir="${build.dir}" manifest="${src.resources}/MANIFEST.MF"/>
+        <echo>[INFO] Jar файл: ${dist.dir}/${jar.name}. Manifest: ${src.resources}/MANIFEST.MF</echo>
+    </target>
+
+    <!-- Тесты. Запускает compile-test и build -->
+    <target name="test" depends="build,compile-test">
+        <mkdir dir="${report.dir}"/>
+        <java classname="org.junit.platform.console.ConsoleLauncher" fork="true" failonerror="false">
+            <classpath>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="${test.build.dir}"/>
+                <fileset dir="dependency">
+                    <include name="**/*.jar"/>
+                </fileset>
+            </classpath>
+            <arg value="--scan-classpath"/>
+            <arg value="${test.build.dir}"/>
+            <arg value="--reports-dir"/>
+            <arg value="${report.dir}"/>
+            <arg value="--details"/>
+            <arg value="tree"/>
+        </java>
+    </target>
+
+
+    <!-- Воспроизведение музыки после сборки -->
+    <target name="music">
+        <exec executable="afplay" failonerror="false">
+            <arg value="${music.file}"/>
+        </exec>
+    </target>
+
+    <!-- Добавить и закоммитить JUnit-отчеты в git после успешных тестов -->
+    <target name="report" depends="test">
+        <exec executable="git">
+            <arg value="add"/>
+            <arg value="${report.dir}/*.xml"/>
+        </exec>
+        <exec executable="git">
+            <arg value="commit"/>
+            <arg value="-m"/>
+            <arg value="${git.commit.msg}"/>
+        </exec>
+        <echo message="JUnit reports added and committed to git."/>
+    </target>
+    
+</project>
