@@ -30,7 +30,7 @@
         </javac>
         <!-- Копируем ресурсы, исключая MANIFEST.MF -->
         <copy todir="${build.dir}">
-            <fileset dir="${src.resources}" excludes="MANIFEST.MF" erroronmissingdir="true"/>
+            <fileset dir="${src.resources}" excludes="META-INF/MANIFEST.MF" erroronmissingdir="true"/>
         </copy>
     </target>
 
@@ -48,8 +48,8 @@
 
     <!-- Упаковка в jar с MANIFEST.MF -->
     <target name="build" depends="compile">
-        <jar destfile="${dist.dir}/${jar.name}" basedir="${build.dir}" manifest="${src.resources}/MANIFEST.MF"/>
-        <echo>[INFO] Jar файл: ${dist.dir}/${jar.name}. Manifest: ${src.resources}/MANIFEST.MF</echo>
+        <jar destfile="${dist.dir}/${jar.name}" basedir="${build.dir}" manifest="META-INF/MANIFEST.MF"/>
+        <echo>[INFO] Jar файл: ${dist.dir}/${jar.name}. Manifest: MANIFEST.MF</echo>
     </target>
 
     <!-- Тесты. Запускает compile-test и build -->
@@ -93,5 +93,15 @@
         </exec>
         <echo message="JUnit reports added and committed to git."/>
     </target>
+
+    <target name="push" depends="report">
+    <exec executable="git">
+        <arg value="push"/>
+        <arg value="origin"/>
+        <arg value="HEAD"/>
+    </exec>
+    <echo message="репорт запушен репозиторий."/>
+</target>
+
     
 </project>
